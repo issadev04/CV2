@@ -44,39 +44,124 @@ body {
 
 .cv {
   width: 1160px;
-  margin: 0 auto;
-
+  margin: 2rem auto;
   background: #17abb3;
+  padding: 2rem;
+  text-align: left;
 }
 /*HEADER*/
 
 .header {
   display: flex;
-  align-items: center;
-  
+  flex-direction: column;
+  align-items: stretch;
   padding: 2.5rem;
+  gap: 1.5rem;
+  
+  text-align: left;
 }
 
 .infos {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
+  align-items: flex-start;
+  
   color: white;
-  margin-left: auto;
+  
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
-  text-align: center;
+  text-align: left;
   font-family: "Lato", sans-serif;
+  line-height: 1.2;
+  
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  
+  
+  
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: 700;
+  text-align: left;
+  position: relative;
+  left: -50px;
+  margin-bottom: 0.3rem;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: zoom-in;
+  transition: transform 0.3s ease;
+}
+.photo img:hover {
+  transform: scale(1.05);
+}
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  margin-left: 4rem;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 60px;
+  color: white;
+  margin-top: 0.3rem;
+  justify-items: start;
+}
+
+.contact > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: start;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+.contact div:hover {
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.contact i {
+  font-size: 1rem;
+  transition: opacity 0.3s ease;
+}
+.contact div:hover i {
+  opacity: 0.6;
+}
+.contact a {
+  color: white;
+  text-decoration: none;
+   font-weight: 400;
 }
