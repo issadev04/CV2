@@ -178,6 +178,11 @@ h2 {
 .bloc-gauche {
   grid-area: left;
 }
+.bloc-gauche h2 {
+  display: inline-block;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 3px;
+}
 .competences {
   background: white;
   grid-area: left;
@@ -193,6 +198,9 @@ h2 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
 }
+.competences .etoiles i {
+  font-size: 0.6rem;
+}
 .ligne {
   display: flex;
   justify-content: space-between;
@@ -201,4 +209,44 @@ h2 {
 }
 .etoiles {
   color: #17abb3;
+  
+}
+.langues h2 {
+  margin-top: 1rem;
+}
+.langue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.qualites ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.qualites li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.qualites li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: #17abb3;
+  font-size: 0.8rem;
+}
+.interet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.interet span::before {
+  content: "■";
+  color: #17abb3;
+  margin-right: 0.5rem;
 }
