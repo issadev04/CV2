@@ -45,19 +45,27 @@ body {
 .cv {
   width: 1160px;
   margin: 2rem auto;
-  background: #17abb3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "header"
+    "left"
+    "footer";
+  
+  background: #e3e3e3;
   padding: 2rem;
-  text-align: left;
+  box-sizing: border-box;
 }
 /*HEADER*/
 
 .header {
+  background: #17abb3;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 2.5rem;
   gap: 1.5rem;
-  
+  grid-area: header;
   text-align: left;
 }
 
@@ -88,12 +96,11 @@ h1 {
 }
 
 h2 {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: left;
-  position: relative;
-  left: -50px;
-  margin-bottom: 0.3rem;
+  line-height: 1.2;
 }
 
 .photo img {
@@ -164,4 +171,34 @@ h2 {
   color: white;
   text-decoration: none;
    font-weight: 400;
+}
+.blocs h2{
+ color:#17abb3
+}
+.bloc-gauche {
+  grid-area: left;
+}
+.competences {
+  background: white;
+  grid-area: left;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+.competences h2 {
+  margin-bottom: 1rem;
+}
+
+.competences h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.etoiles {
+  color: #17abb3;
 }
