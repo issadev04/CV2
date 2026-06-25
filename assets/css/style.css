@@ -35,7 +35,7 @@
 /*BODY*/
 
 body {
-  background-color: #e3e3e3;
+  background-color: #f5f5f5;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   
@@ -43,21 +43,22 @@ body {
 /*CV*/
 
 .cv {
-  width: 1160px;
+  max-width: 1160px;;
+  width: 100%;
   margin: 2rem auto;
-  background: #17abb3;
-  padding: 2rem;
-  text-align: left;
+  background-color: #e3e3e3;
+  
 }
 /*HEADER*/
 
 .header {
+  background: #17abb3;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   padding: 2.5rem;
   gap: 1.5rem;
-  
+  grid-area: header;
   text-align: left;
 }
 
@@ -88,12 +89,11 @@ h1 {
 }
 
 h2 {
+  margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
   text-align: left;
-  position: relative;
-  left: -50px;
-  margin-bottom: 0.3rem;
+  line-height: 1.2;
 }
 
 .photo img {
@@ -165,3 +165,253 @@ h2 {
   text-decoration: none;
    font-weight: 400;
 }
+.blocs {
+  display: flex;
+  gap: 0;
+  flex-wrap: nowrap;
+  align-items: stretch;
+}
+.bloc-gauche {
+  flex: 0 0 30%;
+  min-width: 0;
+  background-color: #e3e3e3
+}
+
+.bloc-droit {
+  flex: 1;
+  min-width: 0;
+   padding: 0 1.5rem;
+   background: #ffffff
+}
+
+.blocs h2 {
+  width: 100%;
+  border-bottom: 2px solid #d3d3d3;
+  padding-bottom: 5px;
+  margin-bottom: 1rem;
+ color:#17abb3
+}
+.bloc-gauche {
+  grid-area: left;
+}
+.bloc-gauche h2 {
+  display: inline-block;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 3px;
+}
+.competences {
+  
+  grid-area: left;
+  padding: 2.5rem;
+  box-sizing: border-box;
+ 
+}
+.competences h2 {
+  margin-bottom: 1rem;
+}
+
+.competences h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.competences .etoiles i {
+  font-size: 0.6rem;
+}
+.ligne {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.etoiles {
+  color: #17abb3;
+  
+}
+.langues h2 {
+  margin-top: 1rem;
+}
+.langue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.qualites ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.qualites li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.qualites li::before {
+  content: "■";
+  position: absolute;
+  left: 0;
+  color: #17abb3;
+  font-size: 0.8rem;
+}
+.interet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.interet span::before {
+  content: "■";
+  color: #17abb3;
+  margin-right: 0.5rem;
+}
+.profil p {
+  text-align: justify;
+  text-indent: 2rem;
+  overflow-wrap: break-word;
+  margin-bottom: 1rem;
+}
+.profil {
+   padding-right: 1rem;
+   padding-top: 2.5rem;
+}
+/* =========================
+   FORMATIONS (SEO + PRO)
+========================= */
+.formation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 1rem;
+}
+
+.formation-item {
+  position: relative;
+  padding: 12px 15px;
+  margin-bottom: 0rem;
+  transition: background-color 0.25s ease;
+}
+
+/* Trait vertical (UX pro, discret) */
+.formation-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0%;
+  background-color: #17abb3;
+  transition: height 0.25s ease;
+}
+
+/* Hover propre */
+.formation-item:hover {
+  background-color: #f5f5f5;
+}
+
+.formation-item:hover::before {
+  height: 100%;
+}
+
+/* Titre formation (SEO hiérarchie propre) */
+.formation-header .titre {
+  font-family: "Lato", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  flex: 1;
+}
+
+/* Date = couleur header (cohérence visuelle branding) */
+.formation-header .annee {
+  color: #17abb3;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Lieu (lisible + propre SEO UX) */
+.formation .lieu {
+  
+  font-size: 0.95rem;
+  color: #333;
+  text-align: justify;
+}
+
+.formation .lieu em {
+  font-style: italic;
+  color: #444;
+}
+.formation h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+/* =========================
+   EXPERIENCES (SEO + PRO)
+========================= */
+.experience-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.experience-item {
+  position: relative;
+  padding: 12px 15px;
+  margin-bottom: 0;
+  transition: background-color 0.25s ease;
+}
+
+/* Trait vertical identique (cohérence CV = important UX) */
+.experience-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 0%;
+  background-color: #17abb3;
+  transition: height 0.25s ease;
+}
+
+.experience-item:hover {
+  background-color: #f5f5f5;
+}
+
+.experience-item:hover::before {
+  height: 100%;
+}
+
+/* Poste */
+.experience-left .poste {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Entreprise */
+.experience-left .entreprise {
+  margin: 0;
+  font-style: italic;
+  color: #444;
+}
+
+/* Date = même couleur branding */
+.experience-right .date {
+  color: #17abb3;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.bloc-droit section {
+  margin-bottom: 0.8rem;
+}
+
+.formation h2,
+.experiences h2 {
+  margin-bottom: 0.5rem;
+}
+
+
