@@ -1,62 +1,71 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/* =========================
+   FONTS
+========================= */
 
-/*police d'écriture pour:
-    - les Titres: Lato
-    - les Textes : Raleway
-  */
 
-/*Raleway avec @font-face*/
 
+/* Raleway */
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
 }
+
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-/*RESET*/
+
+/* =========================
+   RESET
+========================= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/*BODY*/
+
+/* =========================
+   BASE / BODY
+========================= */
 
 body {
   background-color: #f5f5f5;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
-  
 }
-/*CV*/
+
+/* =========================
+   CV CONTAINER
+========================= */
 
 .cv {
-  max-width: 1160px;;
+  max-width: 1160px;
   width: 100%;
   margin: 2rem auto;
   background-color: #e3e3e3;
-  
 }
-/*HEADER*/
+
+/* =========================
+   HEADER
+========================= */
 
 .header {
   background: #17abb3;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  padding: 2.5rem;
+  padding: 1.5rem;
   gap: 1.5rem;
   grid-area: header;
   text-align: left;
@@ -66,81 +75,92 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  
-  color: white;
-  
+  color: #ffffff;
 }
 
+
+/* TITRES */
 h1,
 h2 {
-  margin: 0;
-  text-align: left;
   font-family: "Lato", sans-serif;
+  text-align: left;
   line-height: 1.2;
-  
+}
+h3 {
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  
-  
-  
+  margin-left: 3rem;
 }
 
 h2 {
-  margin: 0;
   font-size: 1.5rem;
   font-weight: 700;
-  text-align: left;
-  line-height: 1.2;
+  margin: 0;
+}
+
+/* PHOTO */
+.photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  overflow: hidden;
+  margin-left: 3rem;
+  flex-shrink: 0;
 }
 
 .photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 70%;
   cursor: zoom-in;
   transition: transform 0.3s ease;
 }
+
 .photo img:hover {
   transform: scale(1.05);
 }
-.photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid white;
-  overflow: hidden;
-  margin-left: 4rem;
-}
 
+/* TOP HEADER */
 .top {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: 3rem;
+  justify-content: flex-start;
+  gap: 25rem;
+  margin-left: 4rem;
 }
+
 .right {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: 0.8rem;
 }
+
+/* CONTACT */
 .contact {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px 60px;
-  color: white;
+  gap: 0.5rem 60px;
+  color: #ffffff;
   margin-top: 0.3rem;
-  justify-items: start;
+  margin-left: 3rem;
 }
 
 .contact > div {
   display: flex;
   align-items: center;
   gap: 10px;
-  justify-self: start;
+}
+
+.contact a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 400;
 }
 
 .contact a:hover {
@@ -157,31 +177,35 @@ h2 {
   font-size: 1rem;
   transition: opacity 0.3s ease;
 }
+
 .contact div:hover i {
   opacity: 0.6;
 }
-.contact a {
-  color: white;
-  text-decoration: none;
-   font-weight: 400;
-}
+
+/* =========================
+   LAYOUT BLOCS
+========================= */
+
 .blocs {
   display: flex;
-  gap: 0;
   flex-wrap: nowrap;
   align-items: stretch;
 }
+
 .bloc-gauche {
   flex: 0 0 30%;
+  background-color: #e3e3e3;
   min-width: 0;
-  background-color: #e3e3e3
+  
+
 }
+
 
 .bloc-droit {
   flex: 1;
+  padding: 0 1.5rem;
+  background: #ffffff;
   min-width: 0;
-   padding: 0 1.5rem;
-   background: #ffffff
 }
 
 .blocs h2 {
@@ -189,52 +213,50 @@ h2 {
   border-bottom: 2px solid #d3d3d3;
   padding-bottom: 5px;
   margin-bottom: 1rem;
- color:#17abb3
-}
-.bloc-gauche {
-  grid-area: left;
-}
-.bloc-gauche h2 {
-  display: inline-block;
-  border-bottom: 1px solid #d3d3d3;
-  padding-bottom: 3px;
-}
-.competences {
-  
-  grid-area: left;
-  padding: 2.5rem;
-  box-sizing: border-box;
- 
-}
-.competences h2 {
-  margin-bottom: 1rem;
+  color: #17abb3;
 }
 
-.competences h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+/* =========================
+   LEFT COLUMN
+========================= */
+
+.competences {
+  padding: 2rem;
+  padding-bottom: 0.1rem;
 }
+
 .competences .etoiles i {
   font-size: 0.6rem;
 }
+
+.etoiles {
+  color: #17abb3;
+}
+
 .ligne {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 0;
+  padding: 0.3 0rem
 }
-.etoiles {
-  color: #17abb3;
-  
-}
-.langues h2 {
-  margin-top: 1rem;
-}
+
+/* LANGUES */
 .langue {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+}
+
+
+
+.langues {
+  padding: 2rem;
+   margin-top: 0.5rem;
+}
+
+/* QUALITES */
+.qualites {
+  padding: 0 2rem 2rem;
 }
 
 .qualites ul {
@@ -255,46 +277,55 @@ h2 {
   color: #17abb3;
   font-size: 0.8rem;
 }
+
+/* INTERETS */
+.interets {
+  padding: 0 2rem 2rem;
+}
+
 .interet {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
+
 .interet span::before {
   content: "■";
   color: #17abb3;
   margin-right: 0.5rem;
 }
+
+/* =========================
+   PROFIL
+========================= */
+
+.profil {
+  padding-right: 1rem;
+  padding-top: 2rem;
+}
+
 .profil p {
   text-align: justify;
   text-indent: 2rem;
   overflow-wrap: break-word;
   margin-bottom: 1rem;
 }
-.profil {
-   padding-right: 1rem;
-   padding-top: 2.5rem;
-}
+
 /* =========================
-   FORMATIONS (SEO + PRO)
+   FORMATION
 ========================= */
+
 .formation-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  width: 100%;
   gap: 1rem;
 }
 
 .formation-item {
   position: relative;
   padding: 12px 15px;
-  margin-bottom: 0rem;
   transition: background-color 0.25s ease;
 }
 
-/* Trait vertical (UX pro, discret) */
 .formation-item::before {
   content: "";
   position: absolute;
@@ -306,7 +337,6 @@ h2 {
   transition: height 0.25s ease;
 }
 
-/* Hover propre */
 .formation-item:hover {
   background-color: #f5f5f5;
 }
@@ -315,57 +345,44 @@ h2 {
   height: 100%;
 }
 
-/* Titre formation (SEO hiérarchie propre) */
 .formation-header .titre {
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
   font-weight: 700;
-  margin: 0;
   flex: 1;
 }
 
-/* Date = couleur header (cohérence visuelle branding) */
 .formation-header .annee {
   color: #17abb3;
   font-weight: 600;
   white-space: nowrap;
-  flex-shrink: 0;
 }
 
-/* Lieu (lisible + propre SEO UX) */
 .formation .lieu {
-  
   font-size: 0.95rem;
-  color: #333;
-  text-align: justify;
+  color: #333333;
 }
 
 .formation .lieu em {
   font-style: italic;
-  color: #444;
+  color: #333333;
 }
-.formation h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+
 /* =========================
-   EXPERIENCES (SEO + PRO)
+   EXPERIENCE
 ========================= */
+
 .experience-line {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   gap: 1rem;
 }
 
 .experience-item {
   position: relative;
   padding: 12px 15px;
-  margin-bottom: 0;
   transition: background-color 0.25s ease;
 }
 
-/* Trait vertical identique (cohérence CV = important UX) */
 .experience-item::before {
   content: "";
   position: absolute;
@@ -385,48 +402,39 @@ h2 {
   height: 100%;
 }
 
-/* Poste */
 .experience-left .poste {
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  margin: 0;
 }
 
-/* Entreprise */
 .experience-left .entreprise {
-  margin: 0;
   font-style: italic;
-  color: #444;
+  color: #333333;
 }
 
-/* Date = même couleur branding */
 .experience-right .date {
   color: #17abb3;
   font-weight: 600;
   white-space: nowrap;
 }
+
 .bloc-droit section {
   margin-bottom: 0.8rem;
 }
 
-.formation h2,
-.experiences h2 {
-  margin-bottom: 0.5rem;
-}
+/* =========================
+   FOOTER
+========================= */
 
 .footer {
-  
-  background: #17abb3; /* même couleur que le header */
+  background: #17abb3;
   color: white;
- 
 }
 
 .footer-content {
-  max-width: 1160px; /* même largeur que ton CV */
-  
-  padding: 1.5rem 2rem;
+  max-width: 1160px;
+  padding: 0.5rem 2rem;
   text-align: center;
-  
 }
 
 .footer-icons {
