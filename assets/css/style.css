@@ -2,8 +2,6 @@
    FONTS
 ========================= */
 
-
-
 /* Raleway */
 @font-face {
   font-family: "Raleway";
@@ -78,7 +76,6 @@ body {
   color: #ffffff;
 }
 
-
 /* TITRES */
 h1,
 h2 {
@@ -86,6 +83,7 @@ h2 {
   text-align: left;
   line-height: 1.2;
 }
+
 h3 {
   font-family: "Lato", sans-serif;
 }
@@ -196,10 +194,7 @@ h2 {
   flex: 0 0 30%;
   background-color: #e3e3e3;
   min-width: 0;
-  
-
 }
-
 
 .bloc-droit {
   flex: 1;
@@ -237,7 +232,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.3 0rem
+  padding: 0.3rem 0;
 }
 
 /* LANGUES */
@@ -247,16 +242,13 @@ h2 {
   margin-bottom: 1rem;
 }
 
-
-
 .langues {
-  padding: 2rem;
-   margin-top: 0.5rem;
+  padding: 0.8rem 2rem 0 2rem;  
 }
 
 /* QUALITES */
 .qualites {
-  padding: 0 2rem 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 .qualites ul {
@@ -280,7 +272,7 @@ h2 {
 
 /* INTERETS */
 .interets {
-  padding: 0 2rem 2rem;
+  padding: 0.2rem 2rem 2rem;
 }
 
 .interet {
